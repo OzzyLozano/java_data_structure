@@ -2,7 +2,7 @@ package tercer_semestre.clases_repaso;
 
 import java.util.Scanner;
 
-public class ejercicio1 {
+public class ejercicio01 {
   public static void main(String[] args) {
     int arreglo[] = new int[5], i;
     Scanner read = new Scanner(System.in);

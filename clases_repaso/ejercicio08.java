@@ -2,7 +2,7 @@ package tercer_semestre.clases_repaso;
 
 import java.util.Scanner;
 
-public class ejercicio8 {
+public class ejercicio08 {
   static Scanner read = new Scanner(System.in);
   public static void main(String[] args) {
     System.out.println("el costo es de: " + calcDesc(pedirCosto()) + " (descuento ya aplicado)");

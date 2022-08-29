@@ -2,7 +2,7 @@ package tercer_semestre.clases_repaso;
 
 import java.util.Scanner;
 
-public class ejercicio4 {
+public class ejercicio04 {
   public static void main(String[] args) {
     int pares = 0, impares = 0;
     System.out.println("ingrese cantidad de numeros q desea dar: ");

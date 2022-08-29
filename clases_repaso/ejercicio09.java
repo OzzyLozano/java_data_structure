@@ -2,7 +2,7 @@ package tercer_semestre.clases_repaso;
 
 import java.util.Scanner;
 
-public class ejercicio9 {
+public class ejercicio09 {
   static Scanner read = new Scanner(System.in);
   public static void main(String[] args) {
     System.out.println("ingrese un numero entero:");

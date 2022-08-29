@@ -2,7 +2,7 @@ package tercer_semestre.clases_repaso;
 
 import java.util.Scanner;
 
-public class ejercicio2 {
+public class ejercicio02 {
   public static void main(String[] args) {
     int vector[] = new int[5], i;
     float promedio = 0;

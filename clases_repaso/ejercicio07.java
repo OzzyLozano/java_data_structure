@@ -1,7 +1,7 @@
 package tercer_semestre.clases_repaso;
 import java.util.Scanner;
 
-public class ejercicio7 {
+public class ejercicio07 {
   static Scanner read = new Scanner(System.in);
   static int num;
   public static void main(String[] args) {

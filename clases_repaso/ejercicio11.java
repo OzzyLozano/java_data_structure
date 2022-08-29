@@ -12,7 +12,7 @@ public class ejercicio11 {
         System.out.println("ingrese");
         arreglo[i][j] = read.nextInt();
         if (i == 0 && j == 0) num_mayor = arreglo[i][j];
-        else (num_mayor < arreglo[i][j]) num_mayor = arreglo[i][j];
+        if (num_mayor < arreglo[i][j]) num_mayor = arreglo[i][j];
       }
     }
     System.out.println("el numero mayor es: " + num_mayor);
