@@ -1,4 +1,4 @@
-package tercer_semestre.clases_repaso;
+package clases_repaso;
 import java.util.Scanner;
 
 public class ejercicio06 {
