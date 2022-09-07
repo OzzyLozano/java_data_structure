@@ -1,8 +1,8 @@
 package recursividad;
 
-public class ejemplo01 {
+public class ejercicio01 {
   public static void main(String[] args) {
-    ejemplo01 ex = new ejemplo01();
+    ejercicio01 ex = new ejercicio01();
     int x = 5;
     ex.print(x);
   }

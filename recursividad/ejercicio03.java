@@ -1,5 +1,5 @@
 package recursividad;
-public class ejemplo02 {
+public class ejercicio03 {
   static int num = 0;
   public static void main(String[] args) {
     calc_factorial(5);
