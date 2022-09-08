@@ -11,7 +11,7 @@ public class ejercicio05 {
     do {
       System.out.print("ingrese el numero d veces a repetir la serie: ");
       ej5.counter = read.nextInt();
-    } while (ej5.counter > 93); // cuando llega al 94 los valores aparecen negativos (limite de tipo de dato long)
+    } while (ej5.counter > 93); // cuando llega al 94 los numeros aparecen negativos
     ej5.fibonacci();
     read.close();
   }
