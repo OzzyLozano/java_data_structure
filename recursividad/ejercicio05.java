@@ -3,13 +3,15 @@ package recursividad;
 import java.util.Scanner;
 
 public class ejercicio05 {
-  static int num1 = 0, num2 = 1, num3, i = 1;
-  int counter;
+  static long num1 = 0, num2 = 1, num3, i = 1;
+  long counter;
   public static void main(String[] args) {
     ejercicio05 ej5 = new ejercicio05();
     Scanner read = new Scanner(System.in);
-    System.out.print("ingrese el numero d veces a repetir la serie: ");
-    ej5.counter = read.nextInt();
+    do {
+      System.out.print("ingrese el numero d veces a repetir la serie: ");
+      ej5.counter = read.nextInt();
+    } while (ej5.counter > 93); // cuando llega al 94 los valores aparecen negativos (limite de tipo de dato long)
     ej5.fibonacci();
     read.close();
   }
@@ -26,7 +28,7 @@ public class ejercicio05 {
       fibonacci();
     }
     else{
-      if (i <= counter) System.out.println("fin c:");
+      if (i > counter) System.out.println("fin c:");
       else {
         num3 = num1 + num2;
         num1 = num2;
