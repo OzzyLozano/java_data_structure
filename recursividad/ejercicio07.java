@@ -1,15 +1,21 @@
 package recursividad;
 
+import java.util.Scanner;
+
 public class ejercicio07 {
-  double inverso;
+  int inverso;
   public static void main(String[] args) {
     ejercicio07 ex = new ejercicio07();
-    double n = 3;
+    Scanner read = new Scanner(System.in);
+    System.out.println("ingresa un numerito c:");
+    int n = read.nextInt();
     ex.num_inverso(n);
+    read.close();
   }
 
-  void num_inverso(double n) {
-    inverso = 1/n;
-    System.out.println(inverso);
+  void num_inverso(int n) {
+    System.out.print(n%10);
+    if(n/10 != 0) num_inverso(n / 10);
+    else System.out.println();
   }
 }
