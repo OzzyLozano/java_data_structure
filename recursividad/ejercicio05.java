@@ -1,10 +1,17 @@
 package recursividad;
 
+import java.util.Scanner;
+
 public class ejercicio05 {
   static int num1 = 0, num2 = 1, num3, i = 1;
+  int counter;
   public static void main(String[] args) {
     ejercicio05 ej5 = new ejercicio05();
+    Scanner read = new Scanner(System.in);
+    System.out.print("ingrese el numero d veces a repetir la serie: ");
+    ej5.counter = read.nextInt();
     ej5.fibonacci();
+    read.close();
   }
 
   void fibonacci() {
@@ -19,7 +26,7 @@ public class ejercicio05 {
       fibonacci();
     }
     else{
-      if (num3 > 1000) System.out.println("fin c:");
+      if (i <= counter) System.out.println("fin c:");
       else {
         num3 = num1 + num2;
         num1 = num2;
