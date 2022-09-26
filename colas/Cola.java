@@ -1,11 +1,13 @@
 package colas;
+/*
+  import java.util.ArrayList;
+  import java.util.Arrays;
+  import java.util.List;
+*/
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Cola {
-  List<Integer> list = new ArrayList<>();
+  // List<Integer> list = new ArrayList<>();
   int v[] = new int[50];
   int indiceCola;
 
@@ -14,33 +16,42 @@ public class Cola {
   }
 
   void agregar(int n) {
-    indiceCola++;
-    v[indiceCola] = n;
+    if(indiceCola < 49) {
+      indiceCola++;
+      v[indiceCola] = n;
+    } else System.out.println("su cola esta llena");
   }
 
   void eliminar() {
-    
+    for (int i = 0; i < indiceCola; i++) {
+      v[i] = v[i + 1];
+    }
+    indiceCola--;
   }
 
   void mostrarCola() {
-    for (int i = 0; i < indiceCola; i++) {
+    println("esta es su cola");
+    for (int i = 0; i <= indiceCola; i++) {
       println("" + v[i]);
     }
   }
 
   void eliminarElementos() {
-
+    indiceCola = -1;
   }
 
   void mostrarPrimerElemento() {
-    if(indiceCola != -1) println("" + v[0]);
+    if(indiceCola != -1) println("El primer elemento es: " + v[0]);
+    else println("cola vacia");
   }
 
   void buscarElemento(int n) {
-    for (int i = 0; i < indiceCola; i++) {
-      if(v[i] == n) println("elemento encontrado");
-      else println("elemento no encontrado");
+    boolean bool = false;
+    for (int i = 0; i <= indiceCola; i++) {
+      if(v[i] == n) bool = true;
     }
+    if(bool) println("elemento encontrado");
+    else println("elemento no encontrado");
   }
 
   void isEmpty() {
@@ -48,8 +59,8 @@ public class Cola {
     else println("cola contiene elementos");
   }
 
-  int size() {
-    return indiceCola + 1;
+  void size() {
+    println("size: " + (indiceCola + 1));
   }
 
   void salir() {
