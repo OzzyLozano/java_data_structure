@@ -1,7 +1,5 @@
 package colas;
 
-import java.util.Scanner;
-
 /*
  * 1 insertar inicio
  * 2 insertar final
@@ -13,27 +11,51 @@ import java.util.Scanner;
  */
 
 public class Cola2 {
-  public static void main(String[] args) {
-    Scanner read = new Scanner(System.in);
-    println("menu: ");
-    println("1. ingresar al inicio");
-    println("2. ingresar al final");
-    println("3. eliminar primero");
-    println("4. eliminar final");
-    println("5. mostrar todos los elementos");
-    println("6. borrar todos los elementos");
-    println("7. salir");
-    doWhile(read.nextInt());
-    read.close();
+  int v[] = new int[50];
+  int i;
+
+  Cola2() {
+    i = -1;
   }
 
-  static void doWhile(int op) {
-    do {
-      
-    } while (op < 1 && op > 7);
+  void insIni(int n) {
+    if (i == -1) {
+      i++;
+      v[i] = n;
+    }
+    else {
+      for (int j = i; j < -1; j--) {
+        v[(j + 1)] = v[j];
+      }
+      v[0] = n;
+      i++;
+    }
   }
 
-  static void println(String s) {
-    System.out.println(s);
+  void insEnd(int n) {
+    i++;
+    v[i] = n;
   }
+
+  void elimPrimero() {
+    for (int j = 0; j <= i; j++) {
+      v[j] = v[(j + 1)];
+    }
+    i--;
+  }
+
+  void elimUltimo() {
+    i--;
+  }
+
+  void mostrar() {
+    for (int j = 0; j <= i; j++) {
+      System.out.println(v[j]);
+    }
+  }
+
+  void borrar() {
+    i = -1;
+  }
+
 }
