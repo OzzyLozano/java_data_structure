@@ -25,9 +25,8 @@ public class ListaEnlazada {
   }
 
   void borrarDatos() {
-    if (!isEmpty()) {
+    if (!isEmpty())
       inicio = null;
-    }
   }
 
 }

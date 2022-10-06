@@ -1,15 +1,5 @@
 package colas;
 
-/*
- * 1 insertar inicio
- * 2 insertar final
- * 3 eliminar primero
- * 4 eliminar ultimo
- * 5 mostrar todos
- * 6 borrar todos
- * 7 salir
- */
-
 public class Cola2 {
   int v[] = new int[50];
   int i;

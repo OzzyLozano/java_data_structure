@@ -2,16 +2,6 @@ package colas;
 
 import java.util.Scanner;
 
-/*
- * 1 insertar inicio
- * 2 insertar final
- * 3 eliminar primero
- * 4 eliminar ultimo
- * 5 mostrar todos
- * 6 borrar todos
- * 7 salir
- */
-
 public class ColaPrincipal2 {
   static Scanner read = new Scanner(System.in);
   static Cola2 cola = new Cola2();

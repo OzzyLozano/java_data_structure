@@ -8,16 +8,16 @@ public class ejercicio03 {
   static Stack pila = new Stack<>();
   static boolean bool = true;
   public static void main(String[] args) {
+    println("operaciones con pilas");
+    println("1. insertar dato");
+    println("2. eliminar elemento");
+    println("3. mostrar elemento cima");
+    println("4. mostrar todos los elementos");
+    println("5. buscar elemento");
+    println("6. verificar si esta vacia");
+    println("7. obtener size");
+    println("8. salir");
     do {
-      println("operaciones con pilas");
-      println("1. insertar dato");
-      println("2. eliminar elemento");
-      println("3. mostrar elemento cima");
-      println("4. mostrar todos los elementos");
-      println("5. buscar elemento");
-      println("6. verificar si esta vacia");
-      println("7. obtener size");
-      println("8. salir");
       println("elija una opcion (por el numero de operacion)");
       switchCase(read.nextInt());
     } while (bool);
