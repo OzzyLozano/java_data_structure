@@ -2,7 +2,7 @@ package pruebas;
 
 import java.util.Scanner;
 
-public class pruebaEstupidaEdgar {
+public class EdgarsTest {
   // i here declare my variables, the arrays are so that i can check easily wich
   // month numbers have 31 or 30, their for to be iterated
   static int dias31[] = {1, 3, 5, 7, 8, 10, 12}, dias30[] = {4, 6, 9, 11};
