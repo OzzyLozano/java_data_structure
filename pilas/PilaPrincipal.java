@@ -24,42 +24,36 @@ public class PilaPrincipal {
 
   static void switchCase(int op) {
     switch (op) {
-      case 1:
+      case 1 -> {
         print("ingrese un dato: ");
         pila.agregar(read.nextInt());
-        break;
-      case 2:
+      }
+      case 2 -> {
         print("eliminando ultimo elemento... ");
         pila.eliminar();
         println("listo c:");
-        break;
-      case 3:
-        println("elemento cima: " + pila.mostrarCima());
-        break;
-      case 4:
-        pila.mostrarElementos();
-        break;
-      case 5:
+        }
+      case 3 -> println("elemento cima: " + pila.mostrarCima());
+      case 4 -> pila.mostrarElementos();
+      case 5 -> {
         print("ingrese elemento a buscar: ");
         println("" + pila.buscarElemento(read.nextInt()));
-        break;
-      case 6:
+        }
+      case 6 -> {
         if (pila.isEmpty()) println("pila vacia");
         else println("pila no vacia");
-        break;
-      case 7:
-        println("size: " + pila.size());
-        break;
-      case 8:
+        }
+      case 7 -> println("size: " + pila.size());
+      case 8 -> {
         bool = false;
         println("bye bye c:");
-        break;
+        }
     
-      default:
+      default -> {
         print("\nelija una opcion correcta: ");
         switchCase(read.nextInt());
         println("");
-        break;
+        }
     }
   }
 
