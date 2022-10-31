@@ -1,8 +1,8 @@
-package grafos;
+package grafos.prueba;
 
 public class Grafo {
-  Vertice grafo;
   int indice, c = -1;
+  Vertice grafo;
   Arista arista;
 
   boolean isEmpty() {
@@ -24,7 +24,7 @@ public class Grafo {
 
   void show() {
     if (!isEmpty()) {
-      System.out.print(grafo.vertice + " ");
+      System.out.print(grafo.vertice + "  ");
       grafo.enlace.show();
     } else {
       System.out.println("");
@@ -101,20 +101,27 @@ public class Grafo {
     }
   }
 
-  void comprobarArista(int n, int m) {
+  boolean comprobarArista(int n, int m) {
     if (!emptyArista()) {
       if (arista.x == n && arista.y == m) {
-        System.out.println("hay conexion entre " + n + " y " + m);
+        return true;
       } else {
-        arista.enlace.comprobarArista(n, m);
+        return arista.enlace.comprobarArista(n, m);
       }
     } else {
-      System.out.println("no hay conexion entre " + n + " y " + m);
+      return false;
     }
   }
 
   void matrizA() {
-    
+    if (!isEmpty() && !emptyArista()) {
+      System.out.println("esta es su matriz: ");
+      System.out.print("    ");
+      show();
+      arista.matriz(indice);
+    } else {
+      System.out.println("no existe grafo o aristas");
+    }
   }
 
 }
