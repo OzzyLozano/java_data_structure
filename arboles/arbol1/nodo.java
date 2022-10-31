@@ -1,4 +1,4 @@
-package arboles;
+package arboles.arbol1;
 
 public class nodo {
   int dato;

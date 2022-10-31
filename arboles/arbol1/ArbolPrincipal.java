@@ -1,4 +1,4 @@
-package arboles;
+package arboles.arbol1;
 
 import java.util.Scanner;
 
@@ -8,7 +8,6 @@ public class ArbolPrincipal {
 
   public static void main(String[] args) {
     printMenu();
-    do_while_function();
   }
 
   static void do_while_function() {
@@ -22,13 +21,15 @@ public class ArbolPrincipal {
         }
         case 2 -> {
           System.out.print("ingrese elemento a eliminar: ");
+          arbol.remove(read.nextInt());
         }
         case 3 -> arbol.preOrden();
         case 4 -> arbol.enOrden();
         case 5 -> arbol.postOrden();
         case 6 -> {
           System.out.print("elemento a buscar: ");
-          arbol.buscarNum(read.nextInt());
+          ArbolBinario a = new ArbolBinario();
+          a = arbol.buscar(read.nextInt());
         }
         case 7 -> System.out.println("la cantidad de elementos es: " + arbol.cantidad());
         case 8 -> System.out.println("la altura es de: " + arbol.altura());
@@ -63,6 +64,7 @@ public class ArbolPrincipal {
     System.out.println("12. verifiacr si un elemento es hoja");
     System.out.println("13. salir");
     System.out.println("14. reimprimir el menu");
+    do_while_function();
   }
 
 }
