@@ -2,12 +2,11 @@ package grafos;
 
 public class Grafo {
   Vertice grafo;
-  int indice;
+  int indice, c = -1;
   Arista arista;
 
   boolean isEmpty() {
-    if (grafo == null) return true;
-    else return false;
+    return grafo == null;
   }
 
   void add(int n) {
@@ -19,8 +18,8 @@ public class Grafo {
       temp.enlace = new Grafo();
       grafo = temp;
       System.out.println("vertice " + n + " agregado");
-      indice++;
     }
+    indice++;
   }
 
   void show() {
@@ -44,8 +43,33 @@ public class Grafo {
     }
   }
 
+  boolean contains(int n) {
+    if (!isEmpty()) {
+      if (n == grafo.vertice) {
+        return true;
+      } else {
+        grafo.enlace.contains(n);
+        return grafo.enlace.contains(n);
+      }
+    } else {
+      return false;
+    }
+  }
+
   void cantidad() {
     System.out.println("cantidad de vertices: " + indice);
+  }
+
+  int obtIndice(int n) {
+    c++;
+    if (!isEmpty()) {
+      if (n == grafo.vertice) {
+        return c;
+      } else {
+        return grafo.enlace.obtIndice(n) + 1;
+      }
+    }
+    return c;
   }
 
   boolean emptyArista() {
@@ -53,9 +77,9 @@ public class Grafo {
   }
 
   void addArista(int n, int m) {
-    if (!emptyArista()) {
+    if (contains(n) && contains(m) && !emptyArista()) {
       arista.enlace.addArista(n, m);
-    } else {
+    } else if (emptyArista()) {
       Arista temp = new Arista();
       temp.arista = true;
       temp.x = n;
@@ -63,6 +87,10 @@ public class Grafo {
       temp.enlace = new Grafo();
       arista = temp;
       System.out.println("arista creada uniendo los vertices " + n + " y " + m);
+    } else if (!contains(n)) {
+      System.out.println("no existe el vertice " + n);
+    } else if (!contains(m)) {
+      System.out.println("no existe el vertice " + m);
     }
   }
 
@@ -73,33 +101,20 @@ public class Grafo {
     }
   }
 
-  // void dirigir(int n, int m) {
-  //   if (!isEmpty()) {
-  //     grafo.vinculo[n][m] = true;
-  //   } else {
-  //     System.out.println("no existe alguno de esos numeros");
-  //   }
-  // }
+  void comprobarArista(int n, int m) {
+    if (!emptyArista()) {
+      if (arista.x == n && arista.y == m) {
+        System.out.println("hay conexion entre " + n + " y " + m);
+      } else {
+        arista.enlace.comprobarArista(n, m);
+      }
+    } else {
+      System.out.println("no hay conexion entre " + n + " y " + m);
+    }
+  }
 
-  // void comprobarVinculo(int n, int m) {
-  //   if (!isEmpty() && grafo.vinculo[n][m]) {
-  //     System.out.println("existe vinculo");
-  //   } else {
-  //     System.out.println("no existe vinculo o alguno de esos numeros.");
-  //   }
-  // }
-
-  // void imprimirTablaVinculos() {
-  //   for (int i = 0; i < 10; i++) {
-  //     for (int j = 0; j < 10; j++) {
-  //       if (grafo.vinculo[i][j]) {
-  //         System.out.print(1 + " ");
-  //       } else {
-  //         System.out.print(0 + " ");
-  //       }
-  //     }
-  //     System.out.println("");
-  //   }
-  // }
+  void matrizA() {
+    
+  }
 
 }
