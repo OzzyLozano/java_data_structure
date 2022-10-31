@@ -110,7 +110,7 @@ public class ArbolBinario {
       if (elim.esHoja()) {
         elim.raiz = null;
       } else {
-        if (!elim.isEmpty()) {
+        if (!elim.raiz.hI.isEmpty() && !elim.raiz.hD.isEmpty()) {
           elim.raiz.data = elim.raiz.hI.buscarMayor();
         } else {
           if (elim.raiz.hI.isEmpty()) {
