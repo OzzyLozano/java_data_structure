@@ -1,4 +1,4 @@
-package ExamenTema3;
+package Examenes.tema3;
 
 import java.util.LinkedList;
 import java.util.Scanner;
