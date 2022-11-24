@@ -1,8 +1,8 @@
-package metodos_busqueda.secuencial.lineal;
+package metodos_busqueda.secuencial;
 
 import java.util.Scanner;
 
-public class BusquedaSecuencial {
+public class BusquedaSecuencial2 {
   public static void main(String[] args) {
     int v[] = new int[5];
     Scanner read = new Scanner(System.in);
@@ -16,7 +16,7 @@ public class BusquedaSecuencial {
     String s = "elemento no encontrado";
     for (int i = 0; i < v.length; i++) {
       if (a == v[i]) {
-        s = "elemento encontrado";
+        s = "elemento encontrado en la posicion " + (i + 1);
         break;
       }
     }
